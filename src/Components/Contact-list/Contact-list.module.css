@@ -1,0 +1,20 @@
+.bullet {
+  margin-left: 0;
+  list-style: none;
+  padding-left: 0px;
+
+  /* counter-reset: li; */
+}
+.bullet li {
+  position: relative;
+  margin-bottom: 1em;
+  border: 3px solid #338fb4;
+  padding: 0.6em;
+  border-radius: 4px;
+  background: #fefefe;
+  color: #231f20;
+  font-family: 'Trebuchet MS', 'Lucida Sans';
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
