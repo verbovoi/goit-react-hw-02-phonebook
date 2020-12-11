@@ -43,7 +43,6 @@ class App extends Component {
   };
 
   onDeleteContact = deleteId => {
-    console.log(deleteId);
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== deleteId),
     }));

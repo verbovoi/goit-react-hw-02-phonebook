@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import s from './Contact-list.module.css';
 import { FiTrash2 } from 'react-icons/fi';
 import { IconContext } from 'react-icons';
+import PropTypes from 'prop-types';
 
 export default class ContactList extends Component {
   getDeleteId = id => {
@@ -40,3 +41,15 @@ export default class ContactList extends Component {
     );
   }
 }
+
+ContactList.propTypes = {
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    }),
+  ).isRequired,
+  visibleList: PropTypes.array.isRequired,
+  deleteContact: PropTypes.func.isRequired,
+};
